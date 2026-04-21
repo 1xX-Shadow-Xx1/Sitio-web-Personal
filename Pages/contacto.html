@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citio Personal</title>
+    <link rel="stylesheet" href="/Diseño/style.css">
+</head>
+<body>
+    <header class="Menu-fijo">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="../index.html" class="enlace">
+                <img src="/img/logo.png" alt="" class="logo">
+            </a>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="valores.html">Valores</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a class="active" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contenedor">
+        <h1>Contacto</h1>
+        
+        <section class="contenedor-contacto">
+            <h2>Formulario de Contacto</h2>
+            <form action="#">
+                <div class="form-grupo">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" placeholder="Introduce tu nombre" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="genero">Genero</label>
+                    <div class="radio-grupo">
+                        <label class="radio-opcion">
+                            <input id="genero" type="radio" name="genero" value="hombre" required /> Hombre
+                        </label>
+                        <label class="radio-opcion">
+                            <input id="genero" type="radio" name="genero" value="mujer" required /> Mujer
+                        </label>
+                    </div>
+                </div>
+                <div class="form-grupo">
+                    <label for="horario">Programado</label>
+                    <select id="horario">
+                        <option value="mañana">Mañana</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noche">Noche</option>
+                    </select>
+                </div>
+                <div class="form-grupo">
+                    <label for="servicios">Servicios</label>
+                    <div class="checkbox-grupo">
+                        <label class="checkbox-opcion">
+                            <input type="checkbox" id="servicios" name="servicios" value="Crear aplicacion"> Crear aplicacion
+                        </label>
+                        <label class="checkbox-opcion">
+                            <input type="checkbox" id="servicios" name="servicios" value="Actualizacion"> Actualizacion
+                        </label>
+                        <label class="checkbox-opcion">
+                            <input type="checkbox" id="servicios" name="servicios" value="promociones"> Promociones
+                        </label>
+                    </div>
+                </div>
+                <div class="form-grupo">
+                    <label for="correo">Correo</label>
+                    <input id="correo" type="email" placeholder="Introduce tu correo" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="10" cols="50" placeholder="¿En qué puedo ayudarte?" required></textarea>
+                </div>
+                <div class="form-grupo">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kevin Liriano. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
