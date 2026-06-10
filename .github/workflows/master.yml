@@ -1,0 +1,29 @@
+name: Mi citio Web Kevin Liriano
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  alerta:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Enviar alerta
+        run: |
+          curl -d "Nuevo push realizado en master Kevin O. Liriano Ramírez" https://ntfy.sh/devops-itla
+  
+  deploy:
+    needs: alerta
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Surge
+        run: npm install -g surge
+
+      - name: Deploy to Surge
+        run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
